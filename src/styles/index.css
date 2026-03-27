@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 222 34% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 34% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 34% 14%;
+    --primary: 221 59% 24%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 34% 96%;
+    --secondary-foreground: 222 34% 16%;
+    --muted: 210 26% 94%;
+    --muted-foreground: 220 14% 42%;
+    --accent: 188 52% 39%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 24% 88%;
+    --input: 214 24% 88%;
+    --ring: 217 56% 44%;
+    --sidebar: 219 41% 15%;
+    --sidebar-foreground: 214 32% 93%;
+    --sidebar-muted: 219 20% 34%;
+    --sidebar-border: 219 22% 24%;
+    --sidebar-accent: 219 33% 21%;
+    --sidebar-active: 188 52% 39%;
+    --success: 147 49% 37%;
+    --success-foreground: 210 40% 98%;
+    --warning: 37 92% 50%;
+    --warning-foreground: 222 34% 12%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+    background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.76), transparent 40%);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .surface-panel {
+    @apply rounded-2xl border border-white/60 bg-white/90 shadow-card backdrop-blur-sm;
+  }
+
+  .grid-panel {
+    @apply surface-panel p-5;
+  }
+}
